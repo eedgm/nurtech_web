@@ -2,7 +2,7 @@
 
 Sitio Web Creado para **Nurtech** con la mayor velocidad de carga
 
-![just-the-basics](/public/landing.png)
+![just-the-basics](https://nurtech.org/storage/landing.png)
 
 ## 🚀 Project Structure
 
