@@ -6,6 +6,7 @@
     'min' => null,
     'max' => null,
     'step' => null,
+    'required' => null,
 ])
 
 @if($label ?? null)

@@ -4,6 +4,9 @@ namespace App\Http\Livewire;
 
 use App\Models\Contact;
 use Livewire\Component;
+use App\Mail\contactClient;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class ContactForm extends Component
@@ -30,14 +33,27 @@ class ContactForm extends Component
         $this->showingModal = false;
         $this->showingModalThanks = false;
         $this->contact = new Contact();
+        $this->contact->subject = 'Más información...';
     }
 
     public function send()
     {
         $this->validate();
-        $this->contact->to = 'edilberto@gmail.com';
+        $this->contact->to = 'edilberto.degr@gmail.com';
 
-        $this->contact->save();
+        DB::transaction(function () {
+            $this->contact->save();
+
+            $details = [
+                'name' => $this->contact->name,
+                'from' => $this->contact->from,
+                'subject' => $this->contact->subject,
+                'body' => $this->contact->body,
+                'phone' => $this->contact->phone
+            ];
+
+            Mail::to('edilberto.degr@gmail.com')->send(new contactClient($details));
+        });
 
         $this->showingModal = false;
         $this->showingModalThanks = true;

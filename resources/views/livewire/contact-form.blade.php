@@ -21,42 +21,44 @@
             </div>
 
             <div class="mt-5">
-                <x-inputs.group class="grid grid-cols-1 gap-5 mt-5 mb-6 md:grid-cols-2">
-                    <div>
-                        <x-landing.inputs.text
-                            name="contact.name"
-                            label="Nombre Completo"
-                            wire:model.defer="contact.name"
-                            maxlength="255"
-                            placeholder="John Doe"
-                            class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
-                        ></x-landing.inputs.text>
-                    </div>
-                    <div>
-                        <x-landing.inputs.email
-                            name="contact.from"
-                            label="Correo"
-                            wire:model.defer="contact.from"
-                            maxlength="255"
-                            placeholder="you@company.com"
-                        ></x-landing.inputs.email>
-                    </div>
+                <x-inputs.group class="w-full">
+                    <x-landing.inputs.text
+                        name="contact.name"
+                        label="Nombre Completo"
+                        wire:model.defer="contact.name"
+                        maxlength="255"
+                        required
+                        placeholder="John Doe"
+                        class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                    ></x-landing.inputs.text>
+                </x-inputs.group>
+                <x-inputs.group class="w-full">
+                    <x-landing.inputs.email
+                        name="contact.from"
+                        label="Correo"
+                        wire:model.defer="contact.from"
+                        maxlength="255"
+                        required
+                        placeholder="you@company.com"
+                    ></x-landing.inputs.email>
                 </x-inputs.group>
                 <x-inputs.group class="w-full">
                     <x-landing.inputs.text
                         name="contact.phone"
-                        label="Número de teléfono"
+                        label="Número de teléfono (opcional)"
                         wire:model.defer="contact.phone"
                         maxlength="255"
                         placeholder="+507 6123-45667"
                     ></x-landing.inputs.text>
                 </x-inputs.group>
+                <hr class="pb-5 mt-10" />
                 <x-inputs.group class="w-full">
                     <x-landing.inputs.text
                         name="contact.subject"
                         label="Asunto"
                         wire:model.defer="contact.subject"
                         maxlength="255"
+                        required
                         placeholder="Necesito ayuda con..."
                     ></x-landing.inputs.text>
                 </x-inputs.group>
@@ -64,6 +66,7 @@
                     <x-landing.inputs.textarea
                         name="contact.body"
                         label="Su mensaje"
+                        required
                         wire:model.defer="contact.body"
                     ></x-landing.inputs.textarea>
                 </x-inputs.group>
@@ -93,7 +96,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <h1 class="text-4xl font-bold">Gracias!</h1>
-                    <p class="pb-10">Gracias por su intertes! Pronto nos pondremos en contacto.</p>
+                    <p class="pb-10">Gracias por su interes! Pronto nos pondremos en contacto.</p>
 
                 </div>
             </div>

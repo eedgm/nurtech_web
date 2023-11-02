@@ -13,7 +13,7 @@
         </div>
     </nav>
 
-    <div class="container flex flex-col px-6 py-5 mx-auto space-y-6 md:py-8 md:flex-row md:items-center">
+    <div class="container flex flex-col px-6 py-1 mx-auto md:py-2 md:flex-row md:items-center">
         <div class="w-full md:w-1/2">
             <div class="w-full">
                 <h1 class="text-3xl font-bold tracking-wide text-gray-800 lg:text-5xl">

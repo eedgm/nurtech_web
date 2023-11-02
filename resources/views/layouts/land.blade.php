@@ -9,10 +9,6 @@
 
         <title>@yield('title')</title>
 
-        <!-- Fonts -->
-        {{-- <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" /> --}}
-
         <link rel="stylesheet" href="{{ asset('storage/vendor/boxicons/css/boxicons.min.css') }}">
 
         <!-- Scripts -->
@@ -23,6 +19,8 @@
     <body>
         <div class="">
             {{ $slot }}
+
+            <x-landing.footer />
         </div>
 
         @stack('modals')
