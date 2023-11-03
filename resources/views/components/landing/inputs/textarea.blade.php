@@ -18,5 +18,5 @@
 >{{$slot}}</textarea>
 
 @error($name)
-    @include('components.inputs.error')
+    @include('components.landing.inputs.error')
 @enderror

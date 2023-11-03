@@ -30,7 +30,7 @@ class contactClient extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address('info@nurtech.org'),
+            from: new Address(env('MAIL_FROM_ADDRESS', 'info@nurtech.org'), 'Info Nurtech'),
             subject: $this->details['subject'],
         );
     }
