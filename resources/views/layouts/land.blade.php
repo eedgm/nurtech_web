@@ -20,7 +20,7 @@
         <div class="">
             {{ $slot }}
 
-            {{-- <x-landing.footer /> --}}
+            <x-landing.footer />
         </div>
 
         @stack('modals')

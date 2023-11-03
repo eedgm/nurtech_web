@@ -2,13 +2,14 @@
     <nav class="container p-6 mx-auto md:flex md:justify-between md:items-center">
         <div class="flex items-center justify-between">
             <div>
-                <a class="text-2xl font-bold text-gray-800 lg:text-3xl hover:text-gray-700" href="#">
+                <a class="text-2xl font-bold text-gray-800 lg:text-3xl hover:text-gray-700" href="{{ route('landing') }}">
                     <img class="w-auto h-14" src="{{ asset('storage/logo-nurtech.png') }}" alt="" />
                 </a>
             </div>
         </div>
 
         <div class="hidden md:flex md:justify-between md:items-center">
+            <a href="tel:+50762132947" class="mr-5 hover:underline"><i class="text-4xl text-blue-600 bx bxs-phone-call bx-tada"></i></a>
             <livewire:contact-form />
         </div>
     </nav>

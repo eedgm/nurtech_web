@@ -18,7 +18,7 @@ use App\Http\Controllers\PermissionController;
 |
 */
 
-Route::get('/', [ContactController::class, 'landing']);
+Route::get('/', [ContactController::class, 'landing'])->name('landing');
 
 Route::middleware(['auth:sanctum', 'verified'])
     ->get('/dashboard', function () {
